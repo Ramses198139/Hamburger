@@ -3,12 +3,38 @@
     --menu-bar-height: 10px;
 }
 
+#container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+#container:hover #menu{
+    background-color: transparent;
+}
+
+#container:hover #menu::before{
+    transform: rotate(45deg);
+    top: 0;
+    bottom: 0;
+    transition-duration: 1s;
+}
+
+#container:hover #menu::after{
+    transform: rotate(-45deg);
+    top: 0;
+    bottom: 0;
+    transition-duration: 1s;
+}
+
 #menu {
     background-color: #D84282;
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
 }
 
 #menu::before,
@@ -30,4 +56,3 @@
     left: 0;
     top: 20px;
 }
-
